@@ -19,7 +19,7 @@ Permite la gestión de estudiantes, materias y su inscripción (relación a trav
   }
 
 3. Desde el Package Managet Console (PM) ejecutar el comando **Update-Database** para instalar y crear la base de datos
-4. Se debe localizar el proyecto SkillCheckQ10.csproj, compilar y ejecutar mediante los comandos
+4. Se debe localizar el archivo proyecto SkillCheckQ10.csproj, compilar y ejecutar mediante los comandos
    
      dotnet clean
    
