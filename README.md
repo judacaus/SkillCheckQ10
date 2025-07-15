@@ -30,3 +30,6 @@ Ningun modulo en la aplicacion requiere logueo unicamente se dejo funcional lo s
      dotnet run
    
 6. Se abre en el navegador la ruta  http://localhost:#### variando el puerto
+
+# Anotacion
+En el archivo inserts.sql estan los inserts a las tablas ya con datos para estudiandes, docentes, materias y matriculas
