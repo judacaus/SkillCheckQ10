@@ -6,6 +6,8 @@ Diseñada como parte de una prueba técnica.
 
 Permite la gestión de estudiantes, materias y su inscripción (relación a través de la tabla GrupoEstudiante) respetando restricciones de créditos por estudiante.
 
+Ningun modulo en la aplicacion requiere logueo unicamente se dejo funcional lo solicitado para que se registren estudiantes, docentes, materias y la matricula
+
 # Instrucciones 
 
 1. Clonar repositorio
