@@ -1,11 +1,12 @@
 # SkillCheckQ10
+
 Pruebas de habilidades para aplicaciones desarrolladas en ASP.NET MVC 8.0 Entity Framework Core y SQL Server, con basededatos configurara den **MSSQLLocalDB**
 
 Diseñada como parte de una prueba técnica. 
 
 Permite la gestión de estudiantes, materias y su inscripción (relación a través de la tabla GrupoEstudiante) respetando restricciones de créditos por estudiante.
 
-# INstrucciones 
+# Instrucciones 
 
 1. Clonar repositorio
 
