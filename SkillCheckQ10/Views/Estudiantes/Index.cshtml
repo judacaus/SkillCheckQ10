@@ -1,0 +1,71 @@
+﻿@model IEnumerable<SkillCheckQ10.Models.EstudiantesView>
+
+@{
+    ViewData["Title"] = "Estudiantes";
+}
+
+<h1>Estudiantes</h1>
+
+<p>
+    <a asp-action="Create">Crear estudiante</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Estudiante.Creditos)
+            </th>
+            <th>
+                Creditos Ocupados
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estudiante.Numero_Documento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estudiante.Tipo_Documento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estudiante.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estudiante.Apellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estudiante.Fecha_Nacimiento)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @(item.Estudiante.Creditos - @item.CreditosOcupados)
+            </td>
+            <td>
+               @item.CreditosOcupados
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estudiante.Numero_Documento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estudiante.Tipo_Documento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estudiante.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estudiante.Apellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estudiante.Fecha_Nacimiento)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Estudiante.Id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Estudiante.Id">Detalle</a> |
+                <a asp-action="Delete" asp-route-id="@item.Estudiante.Id">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\SkillCheckQ10.props" />
+</Project>

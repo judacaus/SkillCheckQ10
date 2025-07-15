@@ -1,0 +1,53 @@
+﻿@model IEnumerable<SkillCheckQ10.Models.GrupoEstudiante>
+
+@{
+    ViewData["Title"] = "Matricula";
+}
+
+<h1>Matricula</h1>
+
+<p>
+    <a asp-action="Create">Crear Matricula</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Materia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Docente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estudiante.Numero_Documento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estudiante)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @(item.Materia.Nombre)
+            </td>
+            <td>
+                @(item.Docente.Nombre + " " + item.Docente.Apellido)
+            </td>
+            <td>
+                @(item.Estudiante.Numero_Documento)
+            </td>
+            <td>
+                @(item.Estudiante.Nombre + " " + item.Estudiante.Apellido)
+            </td>
+            <td>
+                @* <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> | *@
+                <a asp-action="Details" asp-route-id="@item.Id">Detalle</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
